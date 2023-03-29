@@ -29,3 +29,11 @@ std::ostream& operator<<(std::ostream& os, const CartPoint<T>& p)
 {
 	p.print_on(os); return os;
 }
+
+template <typename T>
+CartPoint<T> ReadPoint(std::istream& stream)
+{
+	T x, y;
+	stream >> x >> y;
+	return CartPoint<T>(x, y);
+}
