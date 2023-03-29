@@ -23,3 +23,9 @@ inline double CartPoint<T>::distance(const CartPoint& p) const
 {
 	return sqrt(pow(this->x - p.x, 2) + pow(this->y - p.y, 2));
 }
+
+template <typename T>
+std::ostream& operator<<(std::ostream& os, const CartPoint<T>& p)
+{
+	p.print_on(os); return os;
+}
